@@ -1,0 +1,17 @@
+{
+  "name": "Enumium",
+  "install": "pip install --user --quiet markdown pymdown-extensions",
+  "terminals": [
+    {
+      "name": "docs-preview",
+      "description": "Renders the repository's Markdown docs to HTML and serves them at http://localhost:8080 for live preview.",
+      "command": "python3 .cursor/preview-docs.py && cd .cursor/_site && python3 -m http.server 8080"
+    }
+  ],
+  "ports": [
+    {
+      "name": "docs-preview",
+      "port": 8080
+    }
+  ]
+}
